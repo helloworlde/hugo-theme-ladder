@@ -3,3 +3,7 @@
 {{ if .Site.Params.analytics.umami.enable }}
 <script async defer data-website-id="{{ .Site.Params.analytics.umami.website_id }}" src="{{ .Site.Params.analytics.umami.url }}"></script>
 {{ end }}
+
+{{ if .Site.Params.analytics.cloudflare.enable }}
+<script defer data-cf-beacon='{"token": "{{ .Site.Params.analytics.cloudflare.token }}"}' src="{{ .Site.Params.analytics.cloudflare.url }}" ></script>
+{{ end }}
